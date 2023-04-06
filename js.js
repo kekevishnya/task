@@ -10,23 +10,21 @@ function pay() {
                InvoiceId: '1234567', 
                email: 'user@example.com', //email плательщика (необязательно)
                skin: "mini", //дизайн виджета (необязательно)
-               autoClose: 10, //время в секундах до авто-закрытия виджета (необязательный)
-               data: {
-                   myProp: 'myProp valuße'
-               },
-               payer: { 
-                firstName: 'Тест',
-                lastName: 'Тестов',
-                middleName: 'Тестович',
-                birth: '1955-02-24',
-                address: 'тестовый проезд дом тест',
-                street: 'Lenina',
-                city: 'MO',
-                country: 'RU',
-                phone: '123',
-                postcode: '345'
-               }
-           },
+               autoClose: 3, //время в секундах до авто-закрытия виджета (необязательный)
+               data: 
+              { 
+                firstName: document.getElementById("name_field").value, // прописать обращение к элементу
+                lastName: document.getElementById("last_name_field").value,
+                middlename: document.getElementById("middle_name_field").value,
+                birth: document.getElementById("birth").value,
+                address: document.getElementById("address").value,
+                street: document.getElementById("street").value,
+                city: document.getElementById("city").value,
+                country: document.getElementById("country").value,
+                phone: document.getElementById("phone").value,
+                postcode: document.getElementById("postcode").value,
+               } 
+           }, 
            {
                onSuccess: function (options) {
               success
@@ -41,3 +39,4 @@ function pay() {
            }
        )
    };
+  

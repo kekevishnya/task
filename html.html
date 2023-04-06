@@ -11,30 +11,63 @@
 
 </head>
 <body>
-    <div align="center">
-        <h1 id="h1">БЛАГОТВОРИТЕЛЬНЫЙ ФОНД</p>
-        
-            <div id="paragraph">
-                <p1>Имя</p1>
-                <input id="name_field" type="text"/> 
-           
-                <p2>Фамилия</p2>
-                <input id="last_name_field" type="text"/> 
-           
-                <p3>Отчество</p3>
-                <input id="middle_name_field" type="text"/> 
-                    
-                <p4>Дата Рождения</p4>
-                <input type="date" name="birth" id="datebirth"/>
+    <div>
+    <h1>БЛАГОТВОРИТЕЛЬНЫЙ ФОНД</h1>
+    <form action="#">
 
-                <p5>Адрес</p5>
-                <input id="address" type="text"/>
+        <h2>Для внесения пожертвования в фонд внесите следующие данные:</h2>
+        <fieldset>
+          <legend>Заполните поля ниже:</legend>
+          <ul>
+            <li>
+              <label class = "class" for="fitstname">Имя:</label>
+              <input type="text" name="firstname" placeholder="Тест" id="name_field" required>
+            </li>
+            <li>
+              <label for="lastname">Фамилия:</label>
+              <input type="text" name="lastname" placeholder="Тестов" id="last_name_field" required>
+            </li>
+            <li>
+              <label for="middleName">Отчество:</label>
+              <input type="text" name="middleame" placeholder="Тестович" id="middle_name_field " required>
+            </li>
+            <li>
+              <label for="birth">Дата Рождения:</label>
+              <input type="date" name="birth" placeholder="24-02-1955" id="birth"required>
+            </li>
+            <li>
+                <label for="address">Адрес:</label>
+                <input type="text" name="address" placeholder="Дом" id="address"required>
+            </li>
+            <li>
+                <label for="street">Улица:</label>
+                <input type="text" name="street" placeholder="lenina" id="street"required>
+            </li>
+            <li>
+                <label for="city">Город:</label>
+                <input type="text" name="city" placeholder="МО" id="city"required>
+            </li>
+            <li>
+                <label for="country">Адрес:</label>
+                <input type="text" name="country" placeholder="RU" id="country"required>
+            </li>
+            <li>
+                <label for="phone">Телефон:</label>
+                <input type="text" name="phone" placeholder="123" id="phone"required>
+            </li>
+            <li>
+                <label for="postcode">Почтовый индекс:</label>
+                <input type="text" name="postcode" placeholder="345" id="postcode"required>
+            </li>
+          </ul>
 
-            </div>
-        
-            <button onclick="pay();">Покупка_1</button>
+        </fieldset>
+    </form>
     </div>
-   
+
+<button onclick="pay();">Оплата</button>
+
+
 
 </body>
 </html>
